@@ -1,0 +1,553 @@
+  [1m[35m (12.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (8.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-02-11 17:14:43.294968"], ["updated_at", "2023-02-11 17:14:43.294968"]]
+  [1m[36mTRANSACTION (8.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/about" for 127.0.0.1 at 2023-02-11 17:55:08 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/about"):
+  
+Started GET "/calculate" for 127.0.0.1 at 2023-02-11 17:55:23 +0000
+  
+SyntaxError (C:/Users/cloda/OneDrive/Desktop/Cloud Application Development/Ruby Files/calculatorApp/app/controllers/calculator_controller.rb:7: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/calculator_controller.rb:7: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/calculator_controller.rb:7: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/calculator_controller.rb:7: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/calculate" for 127.0.0.1 at 2023-02-11 17:55:43 +0000
+  
+AbstractController::ActionNotFound (The action 'calculate' could not be found for CalculatorController):
+  
+actionpack (7.0.4.2) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.4.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/calculate" for 127.0.0.1 at 2023-02-11 17:57:11 +0000
+Processing by CalculatorController#calculate as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering calculator/calculate.html.erb within layouts/application
+  Rendered calculator/calculate.html.erb within layouts/application (Duration: 7.0ms | Allocations: 868)
+  Rendered layout layouts/application.html.erb (Duration: 637.8ms | Allocations: 86326)
+Completed 500 Internal Server Error in 802ms (Allocations: 93757)
+
+
+  
+ActionView::Template::Error (Permission denied @ rb_file_s_rename - (C:/Users/cloda/OneDrive/Desktop/Cloud Application Development/Ruby Files/calculatorApp/tmp/cache/assets/sprockets/v4.0.0/KV/KV3A4R7r4q3jYGaXNfSh9rG5jRPvzPuId9zXEb3TOhs.cache.29800.27176.362583, C:/Users/cloda/OneDrive/Desktop/Cloud Application Development/Ruby Files/calculatorApp/tmp/cache/assets/sprockets/v4.0.0/KV/KV3A4R7r4q3jYGaXNfSh9rG5jRPvzPuId9zXEb3TOhs.cache)):
+  
+sprockets (4.2.0) lib/sprockets/path_utils.rb:362:in `rename'
+sprockets (4.2.0) lib/sprockets/path_utils.rb:362:in `atomic_write'
+sprockets (4.2.0) lib/sprockets/cache/file_store.rb:112:in `set'
+sprockets (4.2.0) lib/sprockets/cache.rb:227:in `set'
+sprockets (4.2.0) lib/sprockets/cache.rb:143:in `set'
+sprockets (4.2.0) lib/sprockets/loader.rb:263:in `store_asset'
+sprockets (4.2.0) lib/sprockets/loader.rb:226:in `load_from_unloaded'
+sprockets (4.2.0) lib/sprockets/loader.rb:59:in `block in load'
+sprockets (4.2.0) lib/sprockets/loader.rb:337:in `fetch_asset_from_dependency_cache'
+sprockets (4.2.0) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.2.0) lib/sprockets/cached_environment.rb:44:in `block in load'
+concurrent-ruby (1.2.0) lib/concurrent-ruby/concurrent/map.rb:204:in `block in fetch_or_store'
+concurrent-ruby (1.2.0) lib/concurrent-ruby/concurrent/map.rb:184:in `fetch'
+concurrent-ruby (1.2.0) lib/concurrent-ruby/concurrent/map.rb:203:in `fetch_or_store'
+sprockets (4.2.0) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.2.0) lib/sprockets/context.rb:117:in `load'
+sprockets (4.2.0) lib/sprockets/context.rb:145:in `depend_on_asset'
+sprockets (4.2.0) lib/sprockets/context.rb:185:in `link_asset'
+sprockets-rails (3.4.2) lib/sprockets/rails/context.rb:27:in `compute_asset_path'
+actionview (7.0.4.2) lib/action_view/helpers/asset_url_helper.rb:203:in `asset_path'
+sprockets-rails (3.4.2) lib/sprockets/rails/sourcemapping_url_processor.rb:41:in `sourcemap_asset_path'
+sprockets-rails (3.4.2) lib/sprockets/rails/sourcemapping_url_processor.rb:34:in `resolved_sourcemap_comment'
+sprockets-rails (3.4.2) lib/sprockets/rails/sourcemapping_url_processor.rb:15:in `block in call'
+sprockets-rails (3.4.2) lib/sprockets/rails/sourcemapping_url_processor.rb:11:in `gsub'
+sprockets-rails (3.4.2) lib/sprockets/rails/sourcemapping_url_processor.rb:11:in `call'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:84:in `call_processor'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:66:in `block in call_processors'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:65:in `reverse_each'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:65:in `call_processors'
+sprockets (4.2.0) lib/sprockets/loader.rb:182:in `load_from_unloaded'
+sprockets (4.2.0) lib/sprockets/loader.rb:59:in `block in load'
+sprockets (4.2.0) lib/sprockets/loader.rb:337:in `fetch_asset_from_dependency_cache'
+sprockets (4.2.0) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.2.0) lib/sprockets/cached_environment.rb:44:in `block in load'
+concurrent-ruby (1.2.0) lib/concurrent-ruby/concurrent/map.rb:204:in `block in fetch_or_store'
+concurrent-ruby (1.2.0) lib/concurrent-ruby/concurrent/map.rb:184:in `fetch'
+concurrent-ruby (1.2.0) lib/concurrent-ruby/concurrent/map.rb:203:in `fetch_or_store'
+sprockets (4.2.0) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.2.0) lib/sprockets/bundle.rb:27:in `call'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:84:in `call_processor'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:66:in `block in call_processors'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:65:in `reverse_each'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:65:in `call_processors'
+sprockets (4.2.0) lib/sprockets/loader.rb:182:in `load_from_unloaded'
+sprockets (4.2.0) lib/sprockets/loader.rb:59:in `block in load'
+sprockets (4.2.0) lib/sprockets/loader.rb:337:in `fetch_asset_from_dependency_cache'
+sprockets (4.2.0) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.2.0) lib/sprockets/cached_environment.rb:44:in `block in load'
+concurrent-ruby (1.2.0) lib/concurrent-ruby/concurrent/map.rb:204:in `block in fetch_or_store'
+concurrent-ruby (1.2.0) lib/concurrent-ruby/concurrent/map.rb:184:in `fetch'
+concurrent-ruby (1.2.0) lib/concurrent-ruby/concurrent/map.rb:203:in `fetch_or_store'
+sprockets (4.2.0) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.2.0) lib/sprockets/base.rb:81:in `find_asset'
+sprockets (4.2.0) lib/sprockets/base.rb:88:in `find_all_linked_assets'
+sprockets (4.2.0) lib/sprockets/manifest.rb:125:in `each'
+sprockets (4.2.0) lib/sprockets/manifest.rb:125:in `to_a'
+sprockets (4.2.0) lib/sprockets/manifest.rb:125:in `block (2 levels) in find'
+concurrent-ruby (1.2.0) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:24:in `block in execute'
+concurrent-ruby (1.2.0) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:48:in `block in synchronize'
+concurrent-ruby (1.2.0) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:48:in `synchronize'
+concurrent-ruby (1.2.0) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:48:in `synchronize'
+concurrent-ruby (1.2.0) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:22:in `execute'
+concurrent-ruby (1.2.0) lib/concurrent-ruby/concurrent/promise.rb:564:in `block in realize'
+concurrent-ruby (1.2.0) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:352:in `run_task'
+concurrent-ruby (1.2.0) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:343:in `block (3 levels) in create_worker'
+concurrent-ruby (1.2.0) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `loop'
+concurrent-ruby (1.2.0) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `block (2 levels) in create_worker'
+concurrent-ruby (1.2.0) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:333:in `catch'
+concurrent-ruby (1.2.0) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:333:in `block in create_worker'
+Started GET "/calculate" for 127.0.0.1 at 2023-02-11 18:01:28 +0000
+Processing by CalculatorController#calculate as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering calculator/calculate.html.erb within layouts/application
+  Rendered calculator/calculate.html.erb within layouts/application (Duration: 6.4ms | Allocations: 1209)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 1297)
+Completed 500 Internal Server Error in 22ms (Allocations: 1972)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Simple Calculator</h1>
+
+<%= form_with url: "/sum", local: true, data: { turbo: false } do |f| %>
+
+    <%= text_field_tag :number1 %>
+
+    <%= text_field_tag :number2 %>
+
+    <%= submit_tag "+" %>
+
+    <%= form_tag "/sum" do %>
+
+<% end %>
+
+):
+1:    <h1>Simple Calculator</h1>
+2:    
+3:    <%= form_with url: "/sum", local: true, data: { turbo: false } do |f| %>
+4:    
+5:        <%= text_field_tag :number1 %>
+6:    
+7:        <%= text_field_tag :number2 %>
+8:    
+9:        <%= submit_tag "+" %>
+10:    
+11:        <%= form_tag "/sum" do %>
+12:    
+13:    <% end %>
+  
+app/views/calculator/calculate.html.erb:15: syntax error, unexpected end-of-input, expecting `end'
+app/views/calculator/calculate.html.erb:15: syntax error, unexpected end-of-input, expecting `end'
+app/views/calculator/calculate.html.erb:15: syntax error, unexpected end-of-input, expecting `end'
+app/views/calculator/calculate.html.erb:15: syntax error, unexpected end-of-input, expecting `end'
+app/views/calculator/calculate.html.erb:15: syntax error, unexpected end-of-input, expecting `end'
+app/views/calculator/calculate.html.erb:15: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/calculate" for 127.0.0.1 at 2023-02-11 18:02:47 +0000
+Processing by CalculatorController#calculate as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering calculator/calculate.html.erb within layouts/application
+  Rendered calculator/calculate.html.erb within layouts/application (Duration: 23.2ms | Allocations: 730)
+  Rendered layout layouts/application.html.erb (Duration: 169.0ms | Allocations: 43912)
+Completed 200 OK in 189ms (Views: 182.0ms | Allocations: 44650)
+
+
+Started GET "/calculate" for 127.0.0.1 at 2023-02-11 18:04:21 +0000
+Processing by CalculatorController#calculate as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering calculator/calculate.html.erb within layouts/application
+  Rendered calculator/calculate.html.erb within layouts/application (Duration: 0.5ms | Allocations: 650)
+  Rendered layout layouts/application.html.erb (Duration: 30.6ms | Allocations: 18007)
+Completed 200 OK in 38ms (Views: 35.8ms | Allocations: 18623)
+
+
+Started POST "/sum" for 127.0.0.1 at 2023-02-11 18:04:34 +0000
+  
+AbstractController::ActionNotFound (The action 'sum' could not be found for CalculatorController):
+  
+actionpack (7.0.4.2) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.4.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/sum" for 127.0.0.1 at 2023-02-11 18:06:43 +0000
+Processing by CalculatorController#sum as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "number1"=>"4", "number2"=>"3", "commit"=>"+"}
+No template found for CalculatorController#sum, rendering head :no_content
+Completed 204 No Content in 3ms (Allocations: 626)
+
+
+Started GET "/calculate" for 127.0.0.1 at 2023-02-11 18:07:20 +0000
+Processing by CalculatorController#calculate as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering calculator/calculate.html.erb within layouts/application
+  Rendered calculator/calculate.html.erb within layouts/application (Duration: 0.8ms | Allocations: 629)
+  Rendered layout layouts/application.html.erb (Duration: 40.7ms | Allocations: 17984)
+Completed 200 OK in 47ms (Views: 42.6ms | Allocations: 18604)
+
+
+Started POST "/sum" for 127.0.0.1 at 2023-02-11 18:07:27 +0000
+Processing by CalculatorController#sum as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "number1"=>"6", "number2"=>"2", "commit"=>"+"}
+No template found for CalculatorController#sum, rendering head :no_content
+Completed 204 No Content in 5ms (Allocations: 398)
+
+
+Started POST "/sum" for 127.0.0.1 at 2023-02-11 18:07:33 +0000
+Processing by CalculatorController#sum as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "number1"=>"6", "number2"=>"2", "commit"=>"+"}
+No template found for CalculatorController#sum, rendering head :no_content
+Completed 204 No Content in 5ms (Allocations: 351)
+
+
+Started GET "/calculate" for 127.0.0.1 at 2023-02-11 18:07:41 +0000
+Processing by CalculatorController#calculate as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering calculator/calculate.html.erb within layouts/application
+  Rendered calculator/calculate.html.erb within layouts/application (Duration: 0.5ms | Allocations: 638)
+  Rendered layout layouts/application.html.erb (Duration: 21.4ms | Allocations: 17994)
+Completed 200 OK in 25ms (Views: 23.2ms | Allocations: 18613)
+
+
+Started POST "/sum" for 127.0.0.1 at 2023-02-11 18:07:49 +0000
+  
+AbstractController::ActionNotFound (The action 'sum' could not be found for CalculatorController):
+  
+actionpack (7.0.4.2) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.4.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/sum" for 127.0.0.1 at 2023-02-11 18:09:14 +0000
+Processing by CalculatorController#sum as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "number1"=>"2", "number2"=>"3", "commit"=>"+"}
+No template found for CalculatorController#sum, rendering head :no_content
+Completed 204 No Content in 4ms (Allocations: 517)
+
+
+Started GET "/calculate" for 127.0.0.1 at 2023-02-11 18:10:36 +0000
+Processing by CalculatorController#calculate as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering calculator/calculate.html.erb within layouts/application
+  Rendered calculator/calculate.html.erb within layouts/application (Duration: 1.4ms | Allocations: 846)
+  Rendered layout layouts/application.html.erb (Duration: 44.1ms | Allocations: 18369)
+Completed 200 OK in 59ms (Views: 52.0ms | Allocations: 19245)
+
+
+Started POST "/sum" for 127.0.0.1 at 2023-02-11 18:11:00 +0000
+Processing by CalculatorController#sum as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "number1"=>"3", "number2"=>"2", "commit"=>"+"}
+  Rendering layout layouts/application.html.erb
+  Rendering calculator/sum.html.erb within layouts/application
+  Rendered calculator/sum.html.erb within layouts/application (Duration: 7.6ms | Allocations: 128)
+  Rendered layout layouts/application.html.erb (Duration: 20.4ms | Allocations: 2825)
+Completed 200 OK in 29ms (Views: 22.7ms | Allocations: 3390)
+
+
+Started GET "/sum" for 127.0.0.1 at 2023-02-11 18:11:59 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/sum"):
+  
+Started GET "/calculate" for 127.0.0.1 at 2023-02-11 18:12:05 +0000
+Processing by CalculatorController#calculate as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering calculator/calculate.html.erb within layouts/application
+  Rendered calculator/calculate.html.erb within layouts/application (Duration: 1.6ms | Allocations: 850)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 3922)
+Completed 200 OK in 29ms (Views: 22.2ms | Allocations: 4677)
+
+
+Started POST "/sum" for 127.0.0.1 at 2023-02-11 18:12:09 +0000
+Processing by CalculatorController#sum as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "number1"=>"5", "number2"=>"3", "commit"=>"+"}
+  Rendering layout layouts/application.html.erb
+  Rendering calculator/sum.html.erb within layouts/application
+  Rendered calculator/sum.html.erb within layouts/application (Duration: 17.4ms | Allocations: 555)
+  Rendered layout layouts/application.html.erb (Duration: 27.0ms | Allocations: 3251)
+Completed 200 OK in 35ms (Views: 28.8ms | Allocations: 3810)
+
+
+Started GET "/sum" for 127.0.0.1 at 2023-02-11 18:14:26 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/sum"):
+  
+Started GET "/calculate" for 127.0.0.1 at 2023-02-11 18:14:30 +0000
+Processing by CalculatorController#calculate as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering calculator/calculate.html.erb within layouts/application
+  Rendered calculator/calculate.html.erb within layouts/application (Duration: 0.5ms | Allocations: 635)
+  Rendered layout layouts/application.html.erb (Duration: 23.4ms | Allocations: 17991)
+Completed 200 OK in 28ms (Views: 25.1ms | Allocations: 18610)
+
+
+Started POST "/sum" for 127.0.0.1 at 2023-02-11 18:14:34 +0000
+Processing by CalculatorController#sum as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "number1"=>"3", "number2"=>"3", "commit"=>"+"}
+  Rendering layout layouts/application.html.erb
+  Rendering calculator/sum.html.erb within layouts/application
+  Rendered calculator/sum.html.erb within layouts/application (Duration: 0.6ms | Allocations: 322)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 3018)
+Completed 200 OK in 18ms (Views: 13.1ms | Allocations: 3548)
+
+
+Started POST "/sum" for 127.0.0.1 at 2023-02-11 18:15:00 +0000
+Processing by CalculatorController#sum as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "number1"=>"2", "number2"=>"3", "commit"=>"+"}
+  Rendering layout layouts/application.html.erb
+  Rendering calculator/sum.html.erb within layouts/application
+  Rendered calculator/sum.html.erb within layouts/application (Duration: 0.3ms | Allocations: 423)
+  Rendered layout layouts/application.html.erb (Duration: 24.4ms | Allocations: 17767)
+Completed 200 OK in 28ms (Views: 25.8ms | Allocations: 18695)
+
+
+Started GET "/calculate" for 127.0.0.1 at 2023-02-11 18:17:54 +0000
+Processing by CalculatorController#calculate as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering calculator/calculate.html.erb within layouts/application
+  Rendered calculator/calculate.html.erb within layouts/application (Duration: 31.2ms | Allocations: 2088)
+  Rendered layout layouts/application.html.erb (Duration: 45.0ms | Allocations: 5160)
+Completed 200 OK in 59ms (Views: 53.1ms | Allocations: 5995)
+
+
+Started GET "/calculate" for 127.0.0.1 at 2023-02-11 18:18:23 +0000
+Processing by CalculatorController#calculate as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering calculator/calculate.html.erb within layouts/application
+  Rendered calculator/calculate.html.erb within layouts/application (Duration: 22.6ms | Allocations: 2093)
+  Rendered layout layouts/application.html.erb (Duration: 36.2ms | Allocations: 5171)
+Completed 200 OK in 50ms (Views: 44.8ms | Allocations: 5985)
+
+
+Started GET "/calculate" for 127.0.0.1 at 2023-02-11 18:24:01 +0000
+Processing by CalculatorController#calculate as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering calculator/calculate.html.erb within layouts/application
+  Rendered calculator/calculate.html.erb within layouts/application (Duration: 2.2ms | Allocations: 2077)
+  Rendered layout layouts/application.html.erb (Duration: 45.6ms | Allocations: 19631)
+Completed 200 OK in 60ms (Views: 53.9ms | Allocations: 20568)
+
+
+Started POST "/sum" for 127.0.0.1 at 2023-02-11 18:24:07 +0000
+Processing by CalculatorController#sum as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "number1"=>"1", "number2"=>"2", "commit"=>"add +"}
+  Rendering layout layouts/application.html.erb
+  Rendering calculator/sum.html.erb within layouts/application
+  Rendered calculator/sum.html.erb within layouts/application (Duration: 0.9ms | Allocations: 557)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 3253)
+Completed 200 OK in 19ms (Views: 13.8ms | Allocations: 3845)
+
+
+Started POST "/subtract" for 127.0.0.1 at 2023-02-11 18:24:32 +0000
+Processing by CalculatorController#subtract as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "number1"=>"3", "number2"=>"4", "commit"=>"subtract -"}
+  Rendering layout layouts/application.html.erb
+  Rendering calculator/subtract.html.erb within layouts/application
+  Rendered calculator/subtract.html.erb within layouts/application (Duration: 16.5ms | Allocations: 539)
+  Rendered layout layouts/application.html.erb (Duration: 27.7ms | Allocations: 3241)
+Completed 200 OK in 37ms (Views: 30.0ms | Allocations: 3780)
+
+
+Started GET "/calculate" for 127.0.0.1 at 2023-02-11 18:26:51 +0000
+Processing by CalculatorController#calculate as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering calculator/calculate.html.erb within layouts/application
+  Rendered calculator/calculate.html.erb within layouts/application (Duration: 2.1ms | Allocations: 2084)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 5156)
+Completed 200 OK in 28ms (Views: 22.2ms | Allocations: 5952)
+
+
+Started POST "/sum" for 127.0.0.1 at 2023-02-11 18:26:57 +0000
+Processing by CalculatorController#sum as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "number1"=>"1", "number2"=>"5", "commit"=>"add +"}
+  Rendering layout layouts/application.html.erb
+  Rendering calculator/sum.html.erb within layouts/application
+  Rendered calculator/sum.html.erb within layouts/application (Duration: 10.9ms | Allocations: 1806)
+  Rendered layout layouts/application.html.erb (Duration: 21.2ms | Allocations: 4508)
+Completed 200 OK in 30ms (Views: 23.3ms | Allocations: 5069)
+
+
+Started POST "/subtract" for 127.0.0.1 at 2023-02-11 18:27:26 +0000
+Processing by CalculatorController#subtract as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "number1"=>"2", "number2"=>"3", "commit"=>"subtract -"}
+  Rendering layout layouts/application.html.erb
+  Rendering calculator/subtract.html.erb within layouts/application
+  Rendered calculator/subtract.html.erb within layouts/application (Duration: 18.7ms | Allocations: 1913)
+  Rendered layout layouts/application.html.erb (Duration: 33.1ms | Allocations: 4974)
+Completed 200 OK in 47ms (Views: 41.8ms | Allocations: 5988)
+
+
+Started POST "/sum" for 127.0.0.1 at 2023-02-11 18:27:33 +0000
+Processing by CalculatorController#sum as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "number1"=>"5", "number2"=>"4", "commit"=>"add +"}
+  Rendering layout layouts/application.html.erb
+  Rendering calculator/sum.html.erb within layouts/application
+  Rendered calculator/sum.html.erb within layouts/application (Duration: 27.3ms | Allocations: 1804)
+  Rendered layout layouts/application.html.erb (Duration: 39.0ms | Allocations: 4500)
+Completed 200 OK in 47ms (Views: 41.0ms | Allocations: 5105)
+
+
